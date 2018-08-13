@@ -1,0 +1,84 @@
+Be careful about vairable type. arithmetic type affect precision. Signed type affects behavior.
+
+literal is value of number character or string. literal number does not include signs. sign is operator.
+single quate for char, double quate for string
+string literals separeted by space will be concatenated into one string literal
+escape sequence in string literal represent char that have special meaning in literal, or some nonprintable char.
+
+Variable: a named stroage that can be manipulated
+Object: region of memeory that has type.
+Initialze: get specified value at moment it is created. does not equal to assignment
+default initializer sets build-in object defined outside functions as 0, inside function as undefined, access may fail.
+
+Declarition makes a name known to the program, definition creates the associated entity.
+Declaration does not require definition.
+To use the same variable in multiple file, define the variable in only one file, declare in other file
+use :: operator to fetch value from global scope.
+
+Reference: define an alternative name for an object. A refrence type refers to another type. defined by &d with d name being declared. operation on reference is operated on same object reference refering to.
+reference may be bound to an object not ot a literal or result of more genral expression
+ 
+
+pointer store the address of an object, declaration of the type of pointer must match the object pointed to. prefix * access the value of the object pointed to
+
+initialize pointer to nullptr.
+reference only refer to one obj it is initially bounded to. pointer can change direction.
+void* allows pointer point to any obj.
+
+constant cannot be changed, and must be initialized during declaration.
+constant are only accessed and defined in local file.
+extern const defines a constant that can be accessed from other files.
+Reference can be bond to constant but not to be changed.
+pointer pointing to constant must be defined as constant pointer
+to define a constant pointer, pointer can be defined use *const.
+a top_lev constant means a pointer itself is a constant, a low-lev constants means the obj pointers point to is a constant.
+typedef help define type using custom name.
+auto help define type of new variable of a expression automatically.
+auto may define multiple variables in one statement with same base type,
+decltype define variable same basetype as the argument.
+decltype(()) return reference type.
+structure define need followed by ;after }
+Preprocessor are written in upper class and should be unique. Preprocessor defines header guard.
+
+
+String,vectors,and iterator
+
+get line reads whole line.
+string.empty() return bool variable
+string.size() return size of string.
+
+string operator: =: asign, inequality: campare lenth if one is started with anoter, compare the first different char if different. +:concatenation.
+
+vector can hold basic type, vector, and class obj, not reference
+initialization use {}
+() are used to initialize vector with specific structure
+vector.push_back() works as  vector.append()
+vector can be dynamically sized
+vector can not be printed directly.
+
+iterator
+obj.begin() denote the first member of obj =, however does not denote to the element, so may not be dereference.
+constant iterator can be defined either on constant vector or declaration of constant iterator.
+to call all function wrt to the element the iterator representing,() must be used.
+using iterator to write for loop, do not add element to the container that iterating.
+coumpund operation should be paied attention to because obj may be changed during each function.
+never assign unary operation to bool variable. bool variable will be promted to int variable for most operator.
+logic operator take rvalue gives rvalue
+&& and || always evaluate the left first
+do not use true or false to compare noon bool variable
+assignment operator convert type of the left to the one of the right.
+assigning multiple variables in one expression is okay if variables' types are the same.
+assignment with i++ uses i, ++i uses i+1;
+postfix use the copy of preivious value as result and then increment it.
+* has lower precedence than dot, so if we want to fetch a memeber from obj a pointer points to, use ()
+conditional operator
+type a = (cond)? val1:(cond2)? val2:val3; actlike if ... else if ... else ...
+
+use unsigned types with bitwise operator
+smalll intergral type convert to larger
+non bool convert to bool in conditions
+
+static_cast an explicity for override type
+const_cast convert a const object ot a noncost tyoe.and can only be cast away by constan cast.
+dont use reinterpret castl
+ 
